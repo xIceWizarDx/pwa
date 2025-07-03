@@ -1,6 +1,6 @@
 import './bootstrap';
 import { createApp } from 'vue';
-import ExampleComponent from './components/ExampleComponent.vue';
+import Wellcomee from './components/Wellcomee.vue';
 
-createApp({}).component('example-component', ExampleComponent).mount('#app');
+createApp({}).component('wellcomee', Wellcomee).mount('#app');
 

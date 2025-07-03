@@ -1,10 +1,10 @@
 <template>
-  <div>Hello from Vue</div>
+  <div>Bem-vindo ao componente Wellcomee</div>
 </template>
 
 <script>
 export default {
-  name: 'ExampleComponent'
+  name: 'Wellcomee'
 }
 </script>
 
