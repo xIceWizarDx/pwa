@@ -7,7 +7,7 @@
     <title>Laravel</title>
 
     <div id="app">
-        <example-component />
+        <wellcomee />
     </div>
 
     </html>
