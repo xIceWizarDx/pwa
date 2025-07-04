@@ -1,6 +1,5 @@
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from 'vite'
+import laravel from 'laravel-vite-plugin'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
@@ -10,6 +9,11 @@ export default defineConfig({
             refresh: true,
         }),
         vue(),
-        tailwindcss(),
     ],
-});
+    resolve: {
+        alias: {
+            // Usa a build que inclui o compilador de templates
+            'vue': 'vue/dist/vue.esm-bundler.js',
+        },
+    },
+})
