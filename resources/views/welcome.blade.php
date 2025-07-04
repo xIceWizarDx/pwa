@@ -10,6 +10,7 @@
 </head>
 
 <body class="antialiased">
+    
     <!-- Container principal do Vue -->
     <div id="app">
         <!-- Componente de boas-vindas -->
