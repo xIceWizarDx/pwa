@@ -1,9 +1,5 @@
-import './bootstrap';
-import { createApp } from 'vue';
-import Wellcomee from './components/Wellcomee.vue';
-import FinanceControl from './components/FinanceControl.vue';
+import './bootstrap'
+import { createApp } from 'vue'
+import App from './App.vue'
 
-createApp({})
-    .component('wellcomee', Wellcomee)
-    .component('finance-control', FinanceControl)
-    .mount('#app');
+createApp(App).mount('#app')
