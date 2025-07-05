@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Controle Financeiro</title>
-    <!-- Load application scripts compiled by Vite -->
-    @vite(['resources/js/app.js'])
+    <!-- Load application styles and scripts compiled by Vite -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
