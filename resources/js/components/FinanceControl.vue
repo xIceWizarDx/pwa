@@ -49,6 +49,13 @@
 </template>
 
 <script>
+if (typeof window !== 'undefined' && !document.getElementById('bootstrap-cdn-js')) {
+  const bootstrapScript = document.createElement('script');
+  bootstrapScript.id = 'bootstrap-cdn-js';
+  bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js';
+  document.head.appendChild(bootstrapScript);
+}
+
 export default {
   name: 'FinanceControl',
   data() {
@@ -84,5 +91,6 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css');
 </style>
