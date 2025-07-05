@@ -1,25 +1,51 @@
 <template>
   <div class="max-w-md mx-auto p-4">
-    <h1 class="text-2xl font-bold mb-4">Controle Financeiro</h1>
+    <div class="bg-white shadow rounded-lg p-6">
+      <h1 class="text-2xl font-bold mb-6 text-center">Controle Financeiro</h1>
 
-    <form @submit.prevent="addEntry" class="mb-4">
-      <div class="flex space-x-2 mb-2">
-        <input v-model="newEntry.description" placeholder="Descrição" class="border p-2 flex-1" />
-        <input v-model.number="newEntry.amount" type="number" placeholder="Valor" class="border p-2 w-24" />
+      <form @submit.prevent="addEntry" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-1" for="desc">Descrição</label>
+          <input
+            id="desc"
+            v-model="newEntry.description"
+            placeholder="Digite a descrição"
+            class="border rounded w-full p-2"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1" for="amount">Valor</label>
+          <input
+            id="amount"
+            v-model.number="newEntry.amount"
+            type="number"
+            placeholder="0,00"
+            class="border rounded w-full p-2"
+          />
+        </div>
+        <div class="text-right">
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+            Adicionar
+          </button>
+        </div>
+      </form>
+
+      <div class="mt-6" v-if="entries.length">
+        <h2 class="text-lg font-semibold mb-2">Movimentações</h2>
+        <ul class="divide-y">
+          <li v-for="(entry, index) in entries" :key="index" class="flex justify-between py-2">
+            <span>{{ entry.description }}</span>
+            <span :class="{ 'text-green-600': entry.amount >= 0, 'text-red-600': entry.amount < 0 }">
+              {{ currency(entry.amount) }}
+            </span>
+          </li>
+        </ul>
       </div>
-      <button type="submit" class="bg-blue-500 text-white px-4 py-1 rounded">Adicionar</button>
-    </form>
 
-    <ul>
-      <li v-for="(entry, index) in entries" :key="index" class="flex justify-between mb-2">
-        <span>{{ entry.description }}</span>
-        <span :class="{ 'text-green-600': entry.amount >= 0, 'text-red-600': entry.amount < 0 }">
-          {{ currency(entry.amount) }}
-        </span>
-      </li>
-    </ul>
-
-    <div class="mt-4 font-bold">Total: {{ currency(total) }}</div>
+      <div class="mt-4 text-right font-bold text-lg">
+        Total: {{ currency(total) }}
+      </div>
+    </div>
   </div>
 </template>
 

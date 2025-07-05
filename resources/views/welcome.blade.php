@@ -13,11 +13,8 @@
     
     <!-- Container principal do Vue -->
     <div id="app">
-        <!-- Componente de boas-vindas -->
+        <!-- Componente raiz Vue -->
         <wellcomee></wellcomee>
-
-        <!-- Componente de controle financeiro -->
-        <finance-control></finance-control>
     </div>
 </body>
 
