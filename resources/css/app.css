@@ -1,17 +1,5 @@
-/* -------------------------------------------------------------------------
-   Ponto de entrada do Tailwind CSS
-   ------------------------------------------------------------------------- */
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
-/* 1. Diretivas do Tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* -------------------------------------------------------------------------
-   Importação de fonte personalizada
-   ------------------------------------------------------------------------- */
-
-/* Se “Instrument Sans” for servida localmente em /public/fonts */
 @font-face {
   font-family: 'Instrument Sans';
   src: url('/fonts/InstrumentSans-Regular.woff2') format('woff2'),
@@ -21,25 +9,6 @@
   font-display: swap;
 }
 
-/* -------------------------------------------------------------------------
-   Variáveis CSS / Sobrescrita de tema
-   ------------------------------------------------------------------------- */
-
 :root {
-  /* Definição da stack de fontes sans-serif */
-  --font-sans: 'Instrument Sans',
-               ui-sans-serif,
-               system-ui,
-               sans-serif,
-               'Apple Color Emoji',
-               'Segoe UI Emoji',
-               'Segoe UI Symbol',
-               'Noto Color Emoji';
+  --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
-
-/* Exemplo de uso da variável: */
-/*
-body {
-  font-family: var(--font-sans);
-}
-*/
