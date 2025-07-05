@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-    <div class="w-full max-w-2xl mx-auto">
-      <h1 class="text-3xl font-bold text-center mb-8">Bem-vindo ao Controle Financeiro</h1>
+  <div class="min-vh-100 bg-light d-flex align-items-center justify-content-center p-4">
+    <div class="container">
+      <h1 class="h3 fw-bold text-center mb-4">Bem-vindo ao Controle Financeiro</h1>
       <finance-control />
     </div>
   </div>
